@@ -1,15 +1,14 @@
-package com.example.camara_backend;
+package com.example.camara_backend.controllers;
 
+import com.example.camara_backend.models.Camara;
+import com.example.camara_backend.repository.CamaraRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
-
     @RestController
     @RequestMapping("/api/camaras")
-    @CrossOrigin(origins = "*") // Permitir acceso desde frontend Angular
     public class CamaraController {
 
         @Autowired

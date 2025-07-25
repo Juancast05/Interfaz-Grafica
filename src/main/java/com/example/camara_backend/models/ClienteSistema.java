@@ -1,4 +1,4 @@
-package com.example.camara_backend;
+package com.example.camara_backend.models;
 import jakarta.persistence.*;
 
 @Entity

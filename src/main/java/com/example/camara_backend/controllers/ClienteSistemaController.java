@@ -1,5 +1,7 @@
-package com.example.camara_backend;
+package com.example.camara_backend.controllers;
 
+import com.example.camara_backend.models.ClienteSistema;
+import com.example.camara_backend.repository.ClienteSistemaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;

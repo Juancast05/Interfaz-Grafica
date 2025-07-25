@@ -1,9 +1,7 @@
-package com.example.camara_backend;
+package com.example.camara_backend.models;
 
 import jakarta.persistence.*;
-import jakarta.persistence.criteria.CriteriaBuilder;
 
-import javax.print.DocFlavor;
 import java.time.LocalDate;
 
 @Entity

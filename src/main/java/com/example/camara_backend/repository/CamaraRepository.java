@@ -1,5 +1,6 @@
-package com.example.camara_backend;
+package com.example.camara_backend.repository;
 
+import com.example.camara_backend.models.Camara;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CamaraRepository extends JpaRepository<Camara, Long> {
