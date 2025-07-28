@@ -176,7 +176,7 @@ public class Camara {
     public String getLatitud() {
         return latitud;
     }
-    public void setLatitudt(String latitud) {
+    public void setLatitud(String latitud) {
         this.latitud = latitud;
     }
     public String getLongitud() {
