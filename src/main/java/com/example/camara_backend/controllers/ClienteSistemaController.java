@@ -12,11 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/clientes")
-// NOTA SOBRE CORS: Si tu WebConfig.java ya maneja el CORS globalmente para "/api/**",
-// NO NECESITAS la anotación @CrossOrigin aquí. Si la dejas, puede ser redundante.
-// Si NO usas WebConfig para CORS o si solo quieres configurar CORS para este controlador,
-// DESCOMENTA la siguiente línea y asegúrate de que allowedMethods incluya todos los métodos.
-// @CrossOrigin(origins = "http://localhost:4200", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
+
 public class ClienteSistemaController {
 
     @Autowired

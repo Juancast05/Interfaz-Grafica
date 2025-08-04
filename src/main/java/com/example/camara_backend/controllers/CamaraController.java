@@ -13,12 +13,6 @@ import java.util.Optional; // Importación necesaria para Optional
 
 @RestController
 @RequestMapping("/api/camaras")
-// ** NOTA SOBRE CORS: **
-// Si ya tienes una configuración global de CORS en WebConfig.java que maneja "/api/**",
-// NO NECESITAS esta anotación @CrossOrigin aquí. Si la dejas, puede causar conflictos
-// o ser redundante. Descoméntala SOLO si después de los pasos siguientes, sigues
-// teniendo problemas de CORS ESPECÍFICAMENTE con los endpoints de cámara.
-// @CrossOrigin(origins = "http://localhost:4200", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 public class CamaraController {
 
     @Autowired
@@ -72,11 +66,6 @@ public class CamaraController {
             if (camaraOptional.isPresent()) {
                 Camara existingCamara = camaraOptional.get();
 
-                // *** ACTUALIZAR CADA CAMPO CON LOS DATOS DE camaraDetails ***
-                // Los campos `id_info_camara` (el ID principal) y `fecha_registra` no suelen ser actualizados aquí.
-                // Los ID's de usuario para 'registra' tampoco se actualizan en un PUT.
-
-                // Campos Integer (de relaciones o numéricos, se validan si no son nulos)
                 if (camaraDetails.getId_cliente_sistema() != null) {
                     existingCamara.setId_cliente_sistema(camaraDetails.getId_cliente_sistema());
                 }
