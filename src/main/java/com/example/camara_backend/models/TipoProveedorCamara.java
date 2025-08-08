@@ -28,7 +28,7 @@ public class TipoProveedorCamara {
     public TipoProveedorCamara() {
     }
 
-    // Constructor con campos (opcional)
+    // Constructor con campos
     public TipoProveedorCamara(String nombre, LocalDateTime fechaRegistra, LocalDateTime fechaInactiva, String activo) {
         this.nombre = nombre;
         this.fechaRegistra = fechaRegistra;
@@ -38,7 +38,9 @@ public class TipoProveedorCamara {
 
     // --- Getters y Setters ---
     public Long getIdTipoProveedorCamara() { return idTipoProveedorCamara; }
-    public void setIdTipoProveedorCamara(Long idTipoProveedorCamara) { this.idTipoProveedorCamara = idTipoProveedorCamara; }
+    public void setIdTipoProveedorCamara(Long idTipoProveedorCamara) {
+        this.idTipoProveedorCamara = idTipoProveedorCamara;
+    }
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
     public LocalDateTime getFechaRegistra() { return fechaRegistra; }
