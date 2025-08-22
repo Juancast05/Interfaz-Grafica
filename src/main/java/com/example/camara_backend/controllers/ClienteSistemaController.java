@@ -91,19 +91,4 @@ public class ClienteSistemaController {
         }
     }
 
-    // Eliminar un cliente por ID
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarCliente(@PathVariable Integer id) { // ID es Integer
-        try {
-            if (clienteSistemaRepository.existsById(id)) { // Uso directo del repositorio para verificar existencia
-                clienteSistemaRepository.deleteById(id); // Uso directo del repositorio
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT); // Retorna 204 No Content para éxito
-            } else {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND); // Retorna 404 Not Found si el cliente no existe
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
 }

@@ -132,15 +132,5 @@ public class CamaraController {
         }
     }
 
-    // Eliminar una cámara por ID
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteCamera(@PathVariable Long id) {
-        try {
-            cameraRepository.deleteById(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT); // Retorna 204 No Content para éxito sin cuerpo
-        } catch (Exception e) {
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
+
 }
